@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <h2>Random Numbers</h2>
+        <p id="randomNumber">math:</p>
+        <p id="cryptoNumber">crypto:</p>
+      </section>
+    </div>
+
+    <script>
+      // Generate random number between 1 and 100
+      document.getElementById("randomNumber").textContent +=
+        Math.floor(Math.random() * 100) + 1;
+
+      // Generate crypto random number between 1 and 100
+      window.crypto.getRandomValues(new Uint32Array(1)).forEach((value) => {
+        const cryptoNum = (value % 100) + 1;
+        document.getElementById("cryptoNumber").textContent += cryptoNum;
+      });
+    </script>
+  </body>
+</html>

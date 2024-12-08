@@ -1,0 +1,19 @@
+{
+  "name": "random-vs-crypto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve-page": "http-server -p 8754 -c-1 ./page",
+    "start": "playwright test"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.1"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
